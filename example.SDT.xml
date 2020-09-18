@@ -1,0 +1,114 @@
+<Domain xmlns="http://www.onem2m.org/xml/sdt/4.0" id="example.SDT">
+  <Devices>
+    <Device>
+      <SubDevice id="Endpoint1">
+        <Modules>
+          <Module name="Identify">
+            <DataPoints>
+              <DataPoint name="IdentifyTime">
+                <DataType>
+                  <SimpleType type="uint8"/>
+                </DataType>
+              </DataPoint>
+            </DataPoints>
+            <Actions/>
+            <Action name="Identify">
+              <DataType>
+                <SimpleType type="uint16"/>
+              </DataType>
+            </Action>
+            <Action name="Identify Query"/>
+            <extends domain="example.SDT" class="Identify"/>
+          </Module>
+          <Module name="On/Off">
+            <DataPoints>
+              <DataPoint name="OnOff">
+                <DataType>
+                  <SimpleType type="bool"/>
+                </DataType>
+              </DataPoint>
+            </DataPoints>
+            <Actions/>
+            <Action name="Off"/>
+            <Action name="On"/>
+            <Action name="Toggle"/>
+            <extends domain="example.SDT" class="On/Off"/>
+          </Module>
+          <Module name="Level">
+            <DataPoints>
+              <DataPoint name="CurrentLevel">
+                <DataType>
+                  <SimpleType type="bool"/>
+                </DataType>
+              </DataPoint>
+            </DataPoints>
+            <Actions/>
+            <Action name="Move to Level"/>
+            <Action name="Move"/>
+            <Action name="Step"/>
+            <Action name="Step"/>
+            <Action name="Move to Level (with On/Off)"/>
+            <Action name="Move (with On/Off)"/>
+            <Action name="Step (with On/Off)"/>
+            <Action name="Stop"/>
+            <Action name="Move to Closest Frequency"/>
+            <extends domain="example.SDT" class="Level"/>
+          </Module>
+        </Modules>
+        <Properties>
+          <Property name="ZCLVersion">
+            <SimpleType type="uint8"/>
+          </Property>
+          <Property name="ApplicationVersion">
+            <SimpleType type="uint8"/>
+          </Property>
+          <Property name="PowerSource">
+            <SimpleType type="enum8"/>
+          </Property>
+        </Properties>
+      </SubDevice>
+      <SubDevice id="Endpoint2">
+        <Modules>
+          <Module name="Identify">
+            <DataPoints>
+              <DataPoint name="ZCLVersion">
+                <DataType>
+                  <SimpleType type="uint8"/>
+                </DataType>
+              </DataPoint>
+              <DataPoint name="ApplicationVersion">
+                <DataType>
+                  <SimpleType type="uint8"/>
+                </DataType>
+              </DataPoint>
+              <DataPoint name="PowerSource">
+                <DataType>
+                  <SimpleType type="enum8"/>
+                </DataType>
+              </DataPoint>
+            </DataPoints>
+            <Actions/>
+            <Action name="Identify">
+              <DataType>
+                <SimpleType type="uint16"/>
+              </DataType>
+            </Action>
+            <Action name="Identify Query"/>
+            <extends domain="example.SDT" class="Identify"/>
+          </Module>
+        </Modules>
+        <Properties>
+          <Property name="ZCLVersion">
+            <SimpleType type="uint8"/>
+          </Property>
+          <Property name="ApplicationVersion">
+            <SimpleType type="uint8"/>
+          </Property>
+          <Property name="PowerSource">
+            <SimpleType type="enum8"/>
+          </Property>
+        </Properties>
+      </SubDevice>
+    </Device>
+  </Devices>
+</Domain>

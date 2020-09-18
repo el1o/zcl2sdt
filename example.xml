@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device>
+    <endpoints>
+        <endpoint id="1">
+            <inClusters>
+                <cluster id="0x0000" name="Basic">
+                    <attributes>
+                        <attribute id="0x0000" name="ZCLVersion" type="uint8"/>
+                        <attribute id="0x0001" name="ApplicationVersion" type="uint8"/>
+                        <attribute id="0x0007" name="PowerSource" type="enum8"/>
+                    </attributes>
+                </cluster>
+                <cluster id="0x0003" name="Identify">
+                    <attributes>
+                        <attribute id="0x0000" name="IdentifyTime" type="uint8"/>
+                    </attributes>
+                    <commands>
+                        <command id="0x00" name="Identify">
+                            <payload type="uint16" name="Identify Time"/>
+                        </command>
+                        <command id="0x01" name="Identify Query">
+                        </command>
+                    </commands>
+                </cluster>
+                <cluster id="0x0003" name="On/Off">
+                    <attributes>
+                        <attribute id="0x0000" name="OnOff" type="bool"/>
+                    </attributes>
+                    <commands>
+                        <command id="0x00" name="Off">
+                        </command>
+                        <command id="0x01" name="On">
+                        </command>
+                        <command id="0x02" name="Toggle">
+                        </command>
+                    </commands>
+                </cluster>
+                <cluster id="0x0006" name="Level">
+                    <attributes>
+                        <attribute id="0x0000" name="CurrentLevel" type="bool"/>
+                    </attributes>
+                    <commands>
+                        <command id="0x00" name="Move to Level">
+                        </command>
+                        <command id="0x01" name="Move">
+                        </command>
+                        <command id="0x02" name="Step">
+                        </command>
+                        <command id="0x03" name="Step">
+                        </command>
+                        <command id="0x04" name="Move to Level (with On/Off)">
+                        </command>
+                        <command id="0x05" name="Move (with On/Off)">
+                        </command>
+                        <command id="0x06" name="Step (with On/Off)">
+                        </command>
+                        <command id="0x07" name="Stop">
+                        </command>
+                        <command id="0x08" name="Move to Closest Frequency">
+                        </command>
+                    </commands>
+                </cluster>
+            </inClusters>
+            <outClusters>
+                <cluster id="0x0000" name="Basic">
+                    <attributes>
+                        <attribute id="0x0000" name="ZCLVersion" type="uint8"/>
+                        <attribute id="0x0001" name="ApplicationVersion" type="uint8"/>
+                        <attribute id="0x0007" name="PowerSource" type="enum8"/>
+                    </attributes>
+                    <commands>
+                        <command id="0x00" name="Identify">
+                            <payload type="uint16" name="Identify Time"/>
+                        </command>
+                        <command id="0x01" name="Identify Query">
+                        </command>
+                    </commands>
+                </cluster>
+            </outClusters>
+        </endpoint>
+        <endpoint id="2">
+            <inClusters>
+                <cluster id="0x0000" name="Basic">
+                    <attributes>
+                        <attribute id="0x0000" name="ZCLVersion" type="uint8"/>
+                        <attribute id="0x0001" name="ApplicationVersion" type="uint8"/>
+                        <attribute id="0x0007" name="PowerSource" type="enum8"/>
+                    </attributes>
+                </cluster>
+                <cluster id="0x0003" name="Identify">
+                    <attributes>
+                        <attribute id="0x0000" name="ZCLVersion" type="uint8"/>
+                        <attribute id="0x0001" name="ApplicationVersion" type="uint8"/>
+                        <attribute id="0x0007" name="PowerSource" type="enum8"/>
+                    </attributes>
+                    <commands>
+                        <command id="0x00" name="Identify">
+                            <payload type="uint16" name="Identify Time"/>
+                        </command>
+                        <command id="0x01" name="Identify Query">
+                        </command>
+                    </commands>
+                </cluster>
+            </inClusters>
+            <outClusters>
+                <cluster id="0x0000" name="Basic">
+                    <attributes>
+                        <attribute id="0x0000" name="ZCLVersion" type="uint8"/>
+                        <attribute id="0x0001" name="ApplicationVersion" type="uint8"/>
+                        <attribute id="0x0007" name="PowerSource" type="enum8"/>
+                    </attributes>
+                    <commands>
+                        <command id="0x00" name="Identify">
+                            <payload type="uint16" name="Identify Time"/>
+                        </command>
+                        <command id="0x01" name="Identify Query">
+                        </command>
+                    </commands>
+                </cluster>
+            </outClusters>
+        </endpoint>
+    </endpoints>
+</device>
